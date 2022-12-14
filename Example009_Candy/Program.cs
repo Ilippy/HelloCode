@@ -29,7 +29,7 @@ while(candyAmount > 0)
 {
     if(isPlayer)
     {
-        System.Console.WriteLine($"Осталось {candyAmount} конфет(а)");
+        System.Console.WriteLine($"Осталось {candyAmount} конфет(ы)");
         System.Console.WriteLine($"Введите число конфет, которые вы хотите взять в этом ходу от 1 до {maxAmountOfCandyPerTurn}");
         stringCandyInThisTurn = Console.ReadLine().Trim();
         candyInThisTurn = 0;
@@ -44,14 +44,14 @@ while(candyAmount > 0)
         isPlayer = false;
     } else 
     {
-        System.Console.WriteLine($"Осталось {candyAmount} конфет(а)");
+        System.Console.WriteLine($"Осталось {candyAmount} конфет(ы)");
         candyInThisTurn = candyAmount % (maxAmountOfCandyPerTurn + 1);
         if (candyInThisTurn == 0)
         {
             candyInThisTurn = new Random().Next(1,maxAmountOfCandyPerTurn + 1);
         }
         candyAmount -= candyInThisTurn;
-        System.Console.WriteLine($"Компьютер взял {candyInThisTurn} конфет(у)");
+        System.Console.WriteLine($"Компьютер взял {candyInThisTurn} конфет(ы)");
         isPlayer = true;
     }
     if(candyAmount == 0)
